@@ -1,122 +1,394 @@
-# SpotifyClone
+<div align="center">
 
-An iOS app that **visually clones Spotify's app** and **consumes the official Spotify's Web API** to show(and play) songs, podcasts, artists and more.
+<img width="220" src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" />
 
-The app can play a **30-second** preview of a song, otherwise, to play the full song it would be necessary to have a physical device and the real Spotify app installed(requirements of the Spotify iOS SDK).
+# 🎵 SpotifyClone iOS
 
-I've built the project by myself to learn more about iOS development, and to consolidate already learnt concepts by putting them into practice. By no means the project is perfect, so feel free to open issues or make pull requests with your own new features.
+### Clon moderno de Spotify desarrollado en SwiftUI para iPhone 🚀
 
-I hope you enjoy the app. Feel free to hit me up! <br>
+<p align="center">
+  <b>SpotifyClone iOS</b> es una aplicación inspirada visualmente en Spotify que consume la API oficial de Spotify para mostrar canciones, playlists, podcasts, artistas y álbumes con una interfaz moderna desarrollada en SwiftUI.
+</p>
 
-*-Gabriel*
+<p align="center">
+  <img src="https://img.shields.io/badge/iOS-SwiftUI-orange?style=for-the-badge&logo=swift">
+  <img src="https://img.shields.io/badge/Spotify-Web%20API-1DB954?style=for-the-badge&logo=spotify">
+  <img src="https://img.shields.io/badge/Music-Streaming-black?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Open%20Source-iPhone%20App-success?style=for-the-badge">
+</p>
 
-<br>
+<p align="center">
+  <a href="#-preview">Preview</a> •
+  <a href="#-características">Características</a> •
+  <a href="#-spotify-api">Spotify API</a> •
+  <a href="#-tecnologías-utilizadas">Tecnologías</a> •
+  <a href="#-instalación">Instalación</a>
+</p>
 
-| Home Screen | Search Screen | Track Details Screen | Playlist Details Screen |
-|:---------------:|:---------------:|:---------------:|:---------------:|
-| ![Screen Shot 2021-10-11 at 11 59 25 AM](https://user-images.githubusercontent.com/62707916/136813393-a3dcc218-d800-4556-aa58-11b0019fd89b.png) | ![Screen Shot 2021-10-11 at 12 00 41 PM](https://user-images.githubusercontent.com/62707916/136813456-e010e92f-2465-4f59-94a3-ecbe4bab71cf.png) | ![Screen Shot 2021-10-11 at 11 59 34 AM](https://user-images.githubusercontent.com/62707916/136813590-cbb9dd10-3798-45ac-990c-8f6ace31b36e.png) | ![Screen Shot 2021-10-11 at 12 00 36 PM](https://user-images.githubusercontent.com/62707916/136813659-5b816b8b-bcdb-4320-a166-6b203cb8ff0b.png) 
-| Artist Details Screen | Podcast Details Screen | Album Details Screen | Active Searching Screen |  
-![Screen Shot 2021-10-11 at 12 00 11 PM](https://user-images.githubusercontent.com/62707916/136813737-86d94816-901d-435f-9811-a3febb308024.png) | ![Screen Shot 2021-10-11 at 12 01 16 PM](https://user-images.githubusercontent.com/62707916/136813754-be65c94e-8c5e-4f47-b868-9bc861e8508e.png) | ![Screen Shot 2021-10-11 at 11 59 43 AM](https://user-images.githubusercontent.com/62707916/136813855-1a6a621d-96b9-45c3-b046-bc55c2eea414.png) | ![Screen Shot 2021-10-11 at 12 01 01 PM](https://user-images.githubusercontent.com/62707916/136819824-dfe87231-459f-42e3-a356-133b8503d6d2.png)
+</div>
 
-<br> <br>
-<br> <br>
+---
 
-# How to set up (>5 min)
+# 🌌 Acerca de SpotifyClone iOS
 
-1. Fork this project and `git clone ...`
-2. Create/login with your Spotify Account in the [Spotify for Developers](https://developer.spotify.com) website.
-3. Go to [dashboard](https://developer.spotify.com/dashboard/applications) and select '**Create an app**'.
-4. Give the name and description that you want and in the dashboard select the app that you've just created.
-5. Go to your local clone of the project in your machine and open '**YourSensitiveData.swift**' (./SpotifyClone/SpotifyCloneProject/YourSensitiveData).
-6. Back in your application page of the dashboard, copy the '**Client ID**' and '**Client Secret**' and paste them in '**YourSensitiveData.swift**'.
-7. Again in the dashboard select '**Users and access**' an then click in '**Add new user**'*(if you try to log-in into an account in the app without adding it here, your app will crash with error 403 because Spotify's API doesn't allow that)*. 
-8. In the dashboard select 'EDIT SETTINGS', in the field `redirect_uri` paste `https://www.github.com` (can be any website, but needs to match the `redirect_uri` set in `AuthViewModel.swift`, that by default was set to `https://www.github.com`)
-9. **Great! Now you just need to run the app!**
+**SpotifyClone iOS** es una aplicación multimedia creada para replicar la experiencia visual y funcional de Spotify en dispositivos iPhone utilizando SwiftUI y la API oficial de Spotify.
 
-If you have any problem, feel free to contact me on [github](https://github.com/gabrieldenoni)
+La aplicación permite:
 
-<br> <br>
-<br> <br>
+- 🎵 Explorar canciones
+- 🎧 Escuchar previews de tracks
+- 🔎 Buscar artistas y álbumes
+- 📚 Navegar playlists
+- 🎤 Explorar podcasts
+- ❤️ Descubrir contenido musical
+- 📱 Disfrutar una UI moderna estilo Spotify
 
-## Concepts & Technologies Used
- - Swift
- - Consuming a REST API
- - Caching
- - AVFoundation to play and control audio
- - Combine *(minor use)*
- - SwiftUI
- - XCode Instruments
- - Memory Management and Cache Cleaning
- - Grand Central Dispatch
- - Dependency Injection
- - CocoaPods
+El proyecto fue desarrollado como práctica de:
 
- **External Dependencies:**
- - Alamofire
- - Introspect *(really small use)*
- - SwiftLint
+- iOS Development
+- SwiftUI
+- REST APIs
+- Arquitectura MVVM
+- Streaming Apps
+- Gestión multimedia
+- UI/UX moderna
 
+---
 
-<br> <br>
+# 📸 Preview
 
+<div align="center">
 
-## Turn on the video volume
-| | | | |
-| :-: | :-: | :-: | :- |
-<video src='https://user-images.githubusercontent.com/62707916/138572032-636c1182-92f0-408d-9ed9-bf143e556fd5.mov' width=180/> | <video src='https://user-images.githubusercontent.com/62707916/136820651-4d632ea2-e952-4b4f-afde-cbd3becf3b1a.mov' width=180/> | <video src='https://user-images.githubusercontent.com/62707916/136820663-5bf7d61d-57ac-4fe7-9b47-2aca33516611.mov' width=180/> | <video src='https://user-images.githubusercontent.com/62707916/136820671-a5aece22-3a97-4cdd-9a4f-6b4ef77311ff.mov' width=180/>
+<img src="https://user-images.githubusercontent.com/62707916/136813393-a3dcc218-d800-4556-aa58-11b0019fd89b.png" width="220"/>
 
-*Stuttering is due to simulator lag and shouldn't happen on real device.*
+<img src="https://user-images.githubusercontent.com/62707916/136813456-e010e92f-2465-4f59-94a3-ecbe4bab71cf.png" width="220"/>
 
-<br> <br>
+<img src="https://user-images.githubusercontent.com/62707916/136813590-cbb9dd10-3798-45ac-990c-8f6ace31b36e.png" width="220"/>
 
-## Code Overview
+<img src="https://user-images.githubusercontent.com/62707916/136813659-5b816b8b-bcdb-4320-a166-6b203cb8ff0b.png" width="220"/>
 
-### ViewModels
+</div>
 
-#### Main
-- Navigation
-- Source of the Spotify's Authentication Key to the subviewmodels
+---
 
-#### Auth
-- *`Coordinator`*: Controls the WebView responses
-- Contacts Service(`/APIAuthentication`) to get the Authentication Key
-- Controls the state of AuthScreen
+# ✨ Características
 
-#### Home
-- Contacts Service(`/HomePageAPICalls`) to get media(tracks, podcasts, playlists, albums, artists and episodes) data from the API
-- Controls HomeSubpages(playlistDetail, trackDetail, etc…)
-- Controls the state of HomeScreen
+# 🎵 Streaming y Música
 
-#### Search
-- *`ActiveSearchViewModel`*: Contacts Service(`/SearchPageAPICalls`) to get response data(based on what the user searched) from the API ¹ 
-- Contacts Service(`/SearchPageAPICalls`) to get media data from API ²
-- Controls SearchSubpages(activeSearching, playlistDetail, trackDetail, etc…)
-- Controls the state of DetailScreen
+- ▶️ Reproducción de previews
+- 🎧 Streaming musical
+- ⚡ Audio instantáneo
+- 🎶 Navegación multimedia
+- 📱 Experiencia estilo Spotify
 
-#### Details
-- Contacts Service(`/MediaDetailsPageAPICalls`) to get the detailed data, for a specific item(the item that was clicked), from the API
-- Controls the state of DetailScreen
+---
 
+## 🔎 Exploración Musical
 
-<sup> ¹ The viewmodel for when the user is actively searching for an item. <br>
-² The viewmodel for when the user just opened the SearchScreen, it's similar to a discover screen.
+- 🎤 Buscar artistas
+- 🎵 Buscar canciones
+- 💿 Explorar álbumes
+- 🎧 Podcasts integrados
+- 📚 Playlists dinámicas
 
+---
 
-## Things to do/improve
-  
-- [ ] Use protocols to reduce code duplication.
-- [ ] Add more animations(like, follow, navigation, etc).
-- [ ] Play playlists(one song after another).
-- [ ] Use navigation link for navigation.
-- [ ] Save that the user is already logged.
-- [ ] Unit testing.
-- [ ] Solve animation hitches when scrolling in the playlist tracks.
-- [ ] Better project architecture.
-- [ ] Make the currently playing track bottom bar work.
-- [ ] Make the three dots work to open more options.
+## 📱 Interfaz Moderna
 
+- ✨ SwiftUI moderno
+- 🌙 Dark UI inspirada en Spotify
+- ⚡ Navegación fluida
+- 🎨 Diseño responsive
+- 🎵 Componentes animados
 
-<br> <br> <br>
-  
-![DeC-SV5W4AEDegt](https://user-images.githubusercontent.com/62707916/136847961-b1d23d4c-2f2a-4a1c-b34b-e726997204af.png)
+---
 
+## 🎛️ Reproductor Multimedia
+
+- ⏯️ Play / Pause
+- 📜 Barra de progreso
+- 🔊 Controles multimedia
+- 🎶 Información del track
+- 🎧 Preview de 30 segundos
+
+---
+
+# 🌐 Spotify API
+
+## ⚡ Integración Oficial
+
+La aplicación consume la:
+
+- Spotify Web API
+- Spotify iOS SDK
+- REST Endpoints
+- OAuth Authentication
+
+---
+
+## 🔐 Autenticación
+
+- Login Spotify
+- Client ID / Secret
+- OAuth flow
+- Token handling
+- Session management
+
+---
+
+# 🛠️ Tecnologías Utilizadas
+
+## 📱 Desarrollo iOS
+
+<p>
+  <img src="https://skillicons.dev/icons?i=swift" />
+</p>
+
+- Swift
+- SwiftUI
+- AVFoundation
+- Combine
+- CocoaPods
+
+---
+
+## ⚙️ Librerías y Herramientas
+
+<p>
+  <img src="https://skillicons.dev/icons?i=git,github" />
+</p>
+
+### Dependencias principales
+
+- Alamofire
+- SwiftLint
+- Introspect
+- Spotify iOS SDK
+
+---
+
+# 📂 Estructura del Proyecto
+
+```bash
+SpotifyClone/
+│
+├── Views/                   # Interfaces SwiftUI
+├── ViewModels/              # Arquitectura MVVM
+├── Services/                # Consumo de APIs
+├── Models/                  # Modelos de datos
+├── Components/              # Componentes reutilizables
+├── Assets/                  # Recursos gráficos
+├── SpotifyCloneApp.swift
+└── README.md
+```
+
+---
+
+# ⚡ Instalación
+
+## 1️⃣ Clonar repositorio
+
+```bash
+git clone https://github.com/usuario/SpotifyClone
+```
+
+---
+
+## 2️⃣ Abrir proyecto en Xcode
+
+```bash
+SpotifyClone.xcodeproj
+```
+
+---
+
+## 3️⃣ Configurar Spotify Developer
+
+Crear aplicación en:
+
+```bash
+https://developer.spotify.com
+```
+
+---
+
+## 4️⃣ Configurar credenciales
+
+Editar:
+
+```bash
+YourSensitiveData.swift
+```
+
+Agregar:
+
+```swift
+CLIENT_ID
+CLIENT_SECRET
+```
+
+---
+
+## 5️⃣ Configurar Redirect URI
+
+Ejemplo:
+
+```txt
+https://www.github.com
+```
+
+Debe coincidir con:
+
+```swift
+AuthViewModel.swift
+```
+
+---
+
+## 6️⃣ Ejecutar aplicación
+
+```bash
+Run ▶
+```
+
+---
+
+# 🔥 Funcionalidades Técnicas
+
+## 🎧 Sistema Multimedia
+
+- AVFoundation
+- Audio previews
+- Playback controls
+- Audio session management
+- Media streaming
+
+---
+
+## ⚡ Arquitectura MVVM
+
+- ViewModels separados
+- Dependency Injection
+- State management
+- Clean architecture
+- Modular structure
+
+---
+
+## 🌐 Consumo REST API
+
+- Spotify REST API
+- JSON parsing
+- Authentication flow
+- Data caching
+- Async networking
+
+---
+
+# 📦 Pantallas Incluidas
+
+## 📱 Interfaces principales
+
+- 🏠 Home Screen
+- 🔎 Search Screen
+- 🎵 Track Details
+- 📚 Playlist Details
+- 🎤 Artist Details
+- 🎧 Podcast Details
+- 💿 Album Details
+
+---
+
+# 🧠 Objetivos del Proyecto
+
+## 🎯 Aprender y practicar
+
+- SwiftUI
+- REST APIs
+- OAuth Authentication
+- Arquitectura MVVM
+- Multimedia iOS
+- Spotify SDK
+- UI/UX moderna
+- Gestión de memoria
+
+---
+
+# 📊 Roadmap
+
+## 🚧 Próximamente
+
+- ❤️ Favoritos reales
+- 🎵 Reproducción completa
+- 📚 Queue system
+- 🔥 Más animaciones
+- ☁️ Persistencia de sesión
+- 🎧 Equalizer visual
+- 📱 Mejor navegación
+- 🚀 Optimización de rendimiento
+
+---
+
+# 🤝 Contribuciones
+
+Las contribuciones son bienvenidas ❤️
+
+## Cómo contribuir
+
+1. Haz Fork del proyecto
+2. Crea una rama
+
+```bash
+git checkout -b feature/nueva-funcion
+```
+
+3. Realiza cambios
+4. Haz commit
+
+```bash
+git commit -m "✨ Nueva funcionalidad"
+```
+
+5. Haz push
+
+```bash
+git push origin feature/nueva-funcion
+```
+
+6. Abre un Pull Request 🚀
+
+---
+
+# 👨‍💻 Autor
+
+<div align="center">
+
+## Gabriel
+
+iOS Developer apasionado por SwiftUI, aplicaciones multimedia y experiencias modernas inspiradas en Spotify.
+
+</div>
+
+---
+
+# 🌟 Apoya el Proyecto
+
+Si te gusta SpotifyClone iOS:
+
+⭐ Dale una estrella al repositorio  
+🍴 Haz Fork del proyecto  
+📢 Compártelo con otros desarrolladores
+
+---
+
+# 📜 Licencia
+
+Proyecto Open Source desarrollado con fines educativos y práctica de desarrollo iOS.
+
+---
+
+<div align="center">
+
+### 🎵 SpotifyClone iOS — Experiencia Spotify moderna desarrollada en SwiftUI.
+
+</div>
